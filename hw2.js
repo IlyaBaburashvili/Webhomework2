@@ -96,3 +96,12 @@ Array.prototype.myLastIndexOf = function(element, fromIndex) {
     }   
     return -1;
 };
+
+// KEYS //
+Object.grabKeys = function(obj) {
+    let arr = [];
+    for(let key in obj){
+        arr.push(key);
+    }
+    return arr;
+};
