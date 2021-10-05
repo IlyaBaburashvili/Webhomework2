@@ -46,3 +46,12 @@ Array.prototype.myEvery = function(callbackFn) {
     }   
     return true;
 };
+
+// REDUCE //
+Array.prototype.myReduce = function(callbackFn) {
+    for(let i = 1; i<this.length; i++){
+        if(this[i]===undefined) continue;
+        this[i] = callbackFn(this[i-1], this[i], i, this);
+    }   
+    return this[this.length-1];
+};
