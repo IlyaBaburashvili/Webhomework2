@@ -86,3 +86,13 @@ Array.prototype.myPush = function(...args) {
     }
     return this.length;
 };
+
+// LASTINDEXOF //
+Array.prototype.myLastIndexOf = function(element, fromIndex) {
+    for(let i = this.length-1; i>=fromIndex; i--){
+        if(this[i]===element){
+            return i;
+        }
+    }   
+    return -1;
+};
