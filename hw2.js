@@ -100,12 +100,12 @@ Array.prototype.myLastIndexOf = function(element, fromIndex) {
     if(fromIndex===undefined){
         fromIndex=0;
 	}
-	for(let i = this.length-1; i>=fromIndex; i--){
+    for(let i = this.length-1; i>=fromIndex; i--){
 	    if(this[i]===element){
 		return i;
 	    }
 	}   
-	return -1;
+    return -1;
 };
 
 // KEYS //
