@@ -57,7 +57,7 @@ Array.prototype.myEvery = function(callbackFn) {
 Array.prototype.myReduce = function(callbackFn) {
     for(let i = 1; i<this.length; i++){
         if(this[i]===undefined) continue;
-        this[i] = callbackFn(this[i-1], this[i], i, this);
+        this[i] = callbackFn(this[i-1], this[i], i, this, this[i]);
     }   
     return this[this.length-1];
 };
