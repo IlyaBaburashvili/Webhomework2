@@ -65,3 +65,13 @@ Array.prototype.myIncludes = function(element, fromIndex) {
     }   
     return false;
 };
+
+// INDEXOF //
+Array.prototype.myIndexOf = function(element, fromIndex) {
+    for(let i = fromIndex; i<this.length; i++){
+        if(this[i]===element){
+            return i;
+        }
+    }   
+    return -1;
+};
