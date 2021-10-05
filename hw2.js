@@ -58,7 +58,11 @@ Array.prototype.myReduce = function(callbackFn) {
 
 // INCLUDES //
 Array.prototype.myIncludes = function(element, fromIndex) {
+		if(fromIndex===undefined){
+    		fromIndex=0;
+    }
     for(let i = fromIndex; i<this.length; i++){
+        if(this[i]===undefined) continue;
         if(this[i]===element){
             return true;
         }
@@ -68,7 +72,11 @@ Array.prototype.myIncludes = function(element, fromIndex) {
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(element, fromIndex) {
+		if(fromIndex===undefined){
+    		fromIndex=0;
+    }
     for(let i = fromIndex; i<this.length; i++){
+        if(this[i]===undefined) continue;
         if(this[i]===element){
             return i;
         }
