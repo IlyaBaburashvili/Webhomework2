@@ -26,3 +26,13 @@ Array.prototype.myFilter = function(callbackFn) {
     }  
     return arr;      
 };
+
+// SOME //
+Array.prototype.mySome = function(callbackFn) {
+    for(let i = 0; i<this.length; i++){
+        if(callbackFn(this[i], i, this)){
+            return true;
+        }
+    }   
+    return false;
+};
