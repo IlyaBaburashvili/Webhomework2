@@ -55,3 +55,13 @@ Array.prototype.myReduce = function(callbackFn) {
     }   
     return this[this.length-1];
 };
+
+// INCLUDES //
+Array.prototype.myIncludes = function(element, fromIndex) {
+    for(let i = fromIndex; i<this.length; i++){
+        if(this[i]===element){
+            return true;
+        }
+    }   
+    return false;
+};
