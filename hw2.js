@@ -1,4 +1,5 @@
 // FOR EACH //
+// Executes callbackFn for each array element//
 Array.prototype.myEach = function(callbackFn) {
     for(let i = 0; i<this.length; i++){
         if(this[i]===undefined) continue;
@@ -7,6 +8,7 @@ Array.prototype.myEach = function(callbackFn) {
 };
 
 // MAP //
+// Creates new array and maps values resulting from applying callbackFn to elements in given array //
 Array.prototype.myMap = function(callbackFn) {
     let arr=[];
     for(let i = 0; i<this.length; i++){
@@ -17,6 +19,7 @@ Array.prototype.myMap = function(callbackFn) {
 };
 
 // FILTER //
+// Creates new array fills it with elements from given array that pass condition //
 Array.prototype.myFilter = function(callbackFn) {
     let arr=[];
     for(let i = 0; i<this.length; i++){
@@ -28,6 +31,7 @@ Array.prototype.myFilter = function(callbackFn) {
 };
 
 // SOME //
+// Checks if at least 1 value in function meets given condition //
 Array.prototype.mySome = function(callbackFn) {
     for(let i = 0; i<this.length; i++){
         if(callbackFn(this[i], i, this)){
@@ -38,6 +42,7 @@ Array.prototype.mySome = function(callbackFn) {
 };
 
 // EVERY //
+// Checks if at every value in function meets given condition //
 Array.prototype.myEvery = function(callbackFn) {
     for(let i = 0; i<this.length; i++){
         if(!callbackFn(this[i], i, this)){
@@ -48,6 +53,7 @@ Array.prototype.myEvery = function(callbackFn) {
 };
 
 // REDUCE //
+// Reduces array to single value by applying callbackFn to array elements //
 Array.prototype.myReduce = function(callbackFn) {
     for(let i = 1; i<this.length; i++){
         if(this[i]===undefined) continue;
@@ -57,6 +63,7 @@ Array.prototype.myReduce = function(callbackFn) {
 };
 
 // INCLUDES //
+// Checks if array includes given element //
 Array.prototype.myIncludes = function(element, fromIndex) {
     if(fromIndex===undefined){
     	fromIndex=0;
@@ -70,6 +77,7 @@ Array.prototype.myIncludes = function(element, fromIndex) {
 };
 
 // INDEXOF //
+// Finds index of given element in array //
 Array.prototype.myIndexOf = function(element, fromIndex) {
     if(fromIndex===undefined){
     	fromIndex=0;
@@ -83,6 +91,7 @@ Array.prototype.myIndexOf = function(element, fromIndex) {
 };
 
 // PUSH //
+// Adds elements to end of array //
 Array.prototype.myPush = function(...args) {
     let arg_i = 0;
     let length = this.length;
@@ -94,6 +103,7 @@ Array.prototype.myPush = function(...args) {
 };
 
 // LASTINDEXOF //
+// Finds last index of given element in array //
 Array.prototype.myLastIndexOf = function(element, fromIndex) {
     if(fromIndex===undefined){
         fromIndex=0;
@@ -107,6 +117,7 @@ Array.prototype.myLastIndexOf = function(element, fromIndex) {
 };
 
 // KEYS //
+// Returns keys from object //
 Object.grabKeys = function(obj) {
     let arr = [];
     for(let key in obj){
@@ -116,6 +127,7 @@ Object.grabKeys = function(obj) {
 };
 
 // VALUES //
+// Returns values from object //
 Object.grabValues = function(obj) {
     let arr = [];
     for(let key in obj ){
