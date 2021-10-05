@@ -5,3 +5,13 @@ Array.prototype.myEach = function(callbackFn) {
         callbackFn(this[i], i, this);
     }
 };
+
+// MAP //
+Array.prototype.myMap = function(callbackFn) {
+    let arr=[];
+    for(let i = 0; i<this.length; i++){
+        if(this[i]===undefined) continue;
+        arr.push(callbackFn(this[i], i, this));
+    }    
+    return arr;
+};
