@@ -97,12 +97,15 @@ Array.prototype.myPush = function(...args) {
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(element, fromIndex) {
-    for(let i = this.length-1; i>=fromIndex; i--){
-        if(this[i]===element){
-            return i;
-        }
-    }   
-    return -1;
+    if(fromIndex===undefined){
+        fromIndex=0;
+}
+for(let i = this.length-1; i>=fromIndex; i--){
+    if(this[i]===element){
+        return i;
+    }
+}   
+return -1;
 };
 
 // KEYS //
