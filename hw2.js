@@ -13,7 +13,7 @@ Array.prototype.myMap = function(callbackFn) {
     let arr=[];
     for(let i = 0; i<this.length; i++){
         if(this[i]===undefined) continue;
-        arr.push(callbackFn(this[i], i, this));
+        arr.myPush(callbackFn(this[i], i, this));
     }    
     return arr;
 };
@@ -24,7 +24,7 @@ Array.prototype.myFilter = function(callbackFn) {
     let arr=[];
     for(let i = 0; i<this.length; i++){
         if(callbackFn(this[i], i, this)){
-            arr.push(this[i]);
+            arr.myPush(this[i]);
         }
     }  
     return arr;      
@@ -124,7 +124,7 @@ Array.prototype.myLastIndexOf = function(element, fromIndex) {
 Object.grabKeys = function(obj) {
     let arr = [];
     for(let key in obj){
-        arr.push(key);
+        arr.myPush(key);
     }
     return arr;
 };
@@ -134,7 +134,7 @@ Object.grabKeys = function(obj) {
 Object.grabValues = function(obj) {
     let arr = [];
     for(let key in obj ){
-        arr.push(obj[key]);
+        arr.myPush(obj[key]);
     }
     return arr;
 };
