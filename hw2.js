@@ -55,11 +55,14 @@ Array.prototype.myEvery = function(callbackFn) {
 // REDUCE //
 // Reduces array to single value by applying callbackFn to array elements //
 Array.prototype.myReduce = function(callbackFn) {
+    let previous = this[0];
+    let current = 0;
     for(let i = 1; i<this.length; i++){
         if(this[i]===undefined) continue;
-        this[i] = callbackFn(this[i-1], this[i], i, this, this[0]);
+        current = callbackFn(previous, this[i], i, this, this[0]);
+        previous = current;
     }   
-    return this[this.length-1];
+    return current;
 };
 
 // INCLUDES //
